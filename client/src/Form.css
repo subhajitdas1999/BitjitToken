@@ -1,0 +1,101 @@
+.form__container {
+  /* position: relative; */
+  max-width: 400px;
+  /* height: 500px; */
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  
+  text-align: center;
+  padding: 1.5rem;
+  color: #000;
+}
+
+.token-logo {
+  height: 50px;
+  width: 50px;
+  background: url("./coin_logo.png");
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+}
+
+.token-title {
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.tokenPrice__InEther{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy__info{
+  text-align: left;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+label,
+input,
+.form__btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+label {
+  margin-bottom: 4px;
+}
+
+label:nth-of-type(2) {
+  margin-top: 12px;
+}
+
+input::placeholder {
+  color: gray;
+}
+
+input {
+  background: #ecf0f3;
+  padding: 0.5rem;
+  padding-left: 8px;
+  /* height: 50px; */
+  font-size: 1rem;
+  border-radius: 8px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+.form__btn {
+  margin-top: 1rem;
+ 
+  padding: 0.5rem;
+  background: #efefef;
+  border: none;
+  border-radius: 10px;
+  
+  font-size: 1rem;
+  font-weight: 700;
+    background-color: #FFBF04;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  box-shadow: 7px 7px 8px #fff59e, -7px -7px 8px rgb(250, 232, 150);
+}
+ .form__btn:hover {
+box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+  -2px -2px 4px rgba(255, 255, 255, .4),
+  2px 2px 2px rgba(255, 255, 255, .05),
+  2px 2px 4px rgba(0, 0, 0, .1);
+}
+
+
+

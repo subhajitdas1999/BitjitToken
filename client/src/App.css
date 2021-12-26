@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Orbitron:wght@400;600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App > * {
+  min-height: 100vh;
+  padding: 0 1rem;
+}
+/* ###################################### Log in page css  #################################################*/
+.app__logIn {
+  background-image: url("./LogIn_bg.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Orbitron", sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+}
+.app__logIn h1 {
+  position: absolute;
+  top: 0px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: max(4vw, 2rem);
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(184,25,119,1) 20%, rgb(30, 62, 202) 100%);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 4s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+.app__logIn__card {
+  backdrop-filter: blur(2px) saturate(200%);
+  -webkit-backdrop-filter: blur(2px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  padding: 1rem 2rem;
+  text-align: center;
+  color: white;
+}
+.app__logIn__card p {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.app__logIn__card .btn {
+  width: 200px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid purple;
+  outline: none;
+  transition: 1s ease-in-out;
+  font-family: "Orbitron", sans-serif;
+  color: white;
+}
+
+.app__logIn__card .btn svg {
+  position: absolute;
+  left: 55px;
+  top: 110px;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.app__logIn__card .btn:hover {
+  transition: 1s ease-in-out;
+  background: linear-gradient(to left, #ec008c, #fc6767);
+}
+
+.app__logIn__card .btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.app__logIn__card .btn span {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+/* ###################################### LogIn page css  #################################################*/
+
+/* ###################################### Main page css  #################################################*/
+
+.app__view {
+  background-image: url("./main_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(000, 000, 000, 0.8);
+  background-blend-mode: multiply;
+  color: white;
+
+  /* font-family: 'Merriweather', serif; */
+  font-family: "Orbitron", sans-serif;
+  position: relative;
+}
+
+.app_view__heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.app__view__ac__detail {
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.app__view_BuyContainer {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.app__view_BuyContainer > * {
+  margin: 1rem;
+}
+
+/* for progress bar */
+.app__view__progress__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app__view__sellPersent {
+  position: relative;
+  max-width: 150px;
+  /* height: 150px; */
+  margin-bottom: 1rem;
+}
+
+.app__view__progress__box .app__view__sellPersent svg circle {
+  fill: none;
+  stroke-width: 10;
+  stroke: #000;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+.app__view__progress__box .app__view__sellPersent svg circle:nth-child(1) {
+  /* fill: red; */
+  stroke-dashoffset: 0;
+  stroke: #fff;
+}
+
+.app__view__progress__box .app__view__sellPersent svg circle:nth-child(2) {
+  stroke: #bc13fe;
+}
+
+.app__view__textPersent ,.loader__text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #076283;
+}
+
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: none;
+}
+
+.loader.show{
+  display: block;
+  
+}
+
+
+.spinner {
+  width: max(11vw, 100px);
+  height: max(11vw, 100px);
+}
+
+.spinner {
+  border-radius: 50%;
+  box-shadow: 3px 0 1px -1px rgba(255, 255, 255, 1),
+    5px 0 5px rgba(193, 0, 231, 0.5),
+    inset -10px 0 10px -5px rgba(193, 0, 231, 0.5);
+
+  animation: loading 1s linear infinite;
+  -webkit-animation: loading 1s linear infinite;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.spinner:before {
+  position: absolute;
+  width: max(9vw, 80px);
+  height: max(9vw, 80px);
+  margin: 10% 0 0 10%;
+  border-radius: 50%;
+  content: " ";
+  box-shadow: 2px 0 1px -1px rgba(255, 255, 255, 1),
+    10px 0 5px -5px rgba(193, 0, 231, 0.5),
+    inset -3px 0 3px rgba(117, 3, 139, 0.5);
+}
