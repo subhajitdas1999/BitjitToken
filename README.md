@@ -1,3 +1,3 @@
 # BitjitToken
 
-Visit [this](https://bitjit-token-sale.web.app/) to visit the site
+click [this](https://bitjit-token-sale.web.app/) to visit the site
