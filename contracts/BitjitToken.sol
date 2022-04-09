@@ -62,6 +62,9 @@ pragma solidity >=0.7.1 <0.9.0;
         //update balance
         balanceOf[_from] -=_value;
         balanceOf[_to] += _value;
+
+        //decrease allownece
+        allowence[_from][msg.sender] -= _value;
         
         //emit events
         emit Transfer(_from, _to, _value);
